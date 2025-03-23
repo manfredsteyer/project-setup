@@ -1,16 +1,23 @@
 import { httpResource, HttpResourceRef } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, Signal } from '@angular/core';
 import { Flight } from './flight';
 
 @Injectable({ providedIn: 'root' })
 export class FlightService {
-  find(from: string, to: string): HttpResourceRef<Flight[]> {
+  find(
+    from: Signal<string>,
+    to: Signal<string>,
+    active: Signal<boolean>,
+  ): HttpResourceRef<Flight[]> {
     return httpResource<Flight[]>(
-      () => ({
-        url: 'http://www.angulararchitects.io/demo/flight',
-        params: { from, to },
-        headers: { accept: 'application/json' },
-      }),
+      () =>
+        !active()
+          ? undefined
+          : {
+              url: 'http://demo.angulararchitects.io/api/flight',
+              params: { from: from(), to: to() },
+              headers: { accept: 'application/json' },
+            },
       { defaultValue: [] },
     );
   }

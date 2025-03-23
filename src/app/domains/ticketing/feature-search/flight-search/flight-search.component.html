@@ -1,1 +1,11 @@
-<p>flight-search works!</p>
+<h1>Flights</h1>
+
+<form>
+  <input placeholder="from" name="from" [(ngModel)]="from" />
+  <input placeholder="to" name="to" [(ngModel)]="to" />
+  <button (click)="load()">Load</button>
+</form>
+
+<pre
+  >{{ flightResource.value() | json }}
+</pre>
