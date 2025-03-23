@@ -4,24 +4,15 @@ export const config: SheriffConfig = {
   enableBarrelLess: true,
   modules: {
     'src/app/domains/<domain>/feature-<name>': [
-      'domain:<domain>', 
-      'type:feature'
+      'domain:<domain>',
+      'type:feature',
     ],
-    'src/app/domains/<domain>/ui-<name>': [
-      'domain:<domain>', 
-      'type:ui'
-    ],
-    'src/app/domains/<domain>/data': [
-      'domain:<domain>', 
-      'type:data'
-    ],
-    'src/app/domains/<domain>/util-<name>': [
-      'domain:<domain>', 
-      'type:util'
-    ]
-  }, 
+    'src/app/domains/<domain>/ui-<name>': ['domain:<domain>', 'type:ui'],
+    'src/app/domains/<domain>/data': ['domain:<domain>', 'type:data'],
+    'src/app/domains/<domain>/util-<name>': ['domain:<domain>', 'type:util'],
+  },
   depRules: {
-    'root': '*',
+    root: '*',
     'domain:*': [sameTag, 'domain:shared'],
     'type:feature': ['type:ui', 'type:data', 'type:util'],
     'type:ui': ['type:data', 'type:util'],
@@ -29,11 +20,6 @@ export const config: SheriffConfig = {
     'type:util': [],
   },
 };
-
-
-
-
-
 
 /*
     // More Generic and hence compact

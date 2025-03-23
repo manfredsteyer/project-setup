@@ -2,7 +2,7 @@
 const eslint = require("@eslint/js");
 const tseslint = require("typescript-eslint");
 const angular = require("angular-eslint");
-const sheriff = require('@softarc/eslint-plugin-sheriff');
+const sheriff = require("@softarc/eslint-plugin-sheriff");
 
 module.exports = tseslint.config(
   {
@@ -34,9 +34,9 @@ module.exports = tseslint.config(
       "@typescript-eslint/no-unused-vars": [
         "error",
         {
-          "argsIgnorePattern": "^_"
-        }
-      ]
+          argsIgnorePattern: "^_",
+        },
+      ],
     },
   },
   {
@@ -48,7 +48,7 @@ module.exports = tseslint.config(
     rules: {},
   },
   {
-    files: ['**/*.ts'],
+    files: ["**/*.ts"],
     extends: [sheriff.configs.all],
   },
 );

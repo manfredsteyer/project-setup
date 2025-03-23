@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({providedIn: 'root'})
-export class InternalService {
-}
+@Injectable({ providedIn: 'root' })
+export class InternalService {}

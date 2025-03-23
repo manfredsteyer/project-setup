@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-options',
   imports: [],
   templateUrl: './options.component.html',
-  styleUrl: './options.component.css'
+  styleUrl: './options.component.css',
 })
-export class OptionsComponent {
-
-}
+export class OptionsComponent {}

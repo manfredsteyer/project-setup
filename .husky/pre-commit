@@ -1,0 +1,4 @@
+ng lint
+# ng test
+
+npx pretty-quick --staged
