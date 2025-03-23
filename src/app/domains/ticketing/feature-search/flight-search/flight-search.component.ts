@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { FlightService } from '../../data/flight.service';
-import { AuthService } from '../../../shared/util-auth/auth.service';
-// import { InternalService } from '../../../shared/util-auth/internal/internal.service';
-import { DefaultStrategy } from '../../../shared/util-auth/strategies/default-strategy';
-// import { CheckinService } from '../../../checkin/data/checkin.service';
+import { FlightService } from '@my-project/ticketing/data/flight.service';
+import { AuthService } from '@my-project/shared/util-auth/auth.service';
+
+// import { InternalService } from '@my-project/shared/util-auth/internal/internal.service';
+import { DefaultStrategy } from '@my-project/shared/util-auth/strategies/default-strategy';
+// import { CheckinService } from '@my-project/checkin/data/checkin.service';
 
 @Component({
   selector: 'app-flight-search',
